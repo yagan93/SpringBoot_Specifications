@@ -19,9 +19,9 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public List<Book> findAll(int price) {
+    public List<Book> findAll(double purchasePrice) {
         ExtendedSpecification<Book> specification = new ExtendedSpecification<>();
-        specification.add(new SearchCriteria("purchasePrice", price, SearchOperation.EQUAL));
+        specification.add(new SearchCriteria(Book_.PURCHASE_PRICE, purchasePrice, SearchOperation.EQUAL));
         return bookRepository.findAll(specification);
     }
 }

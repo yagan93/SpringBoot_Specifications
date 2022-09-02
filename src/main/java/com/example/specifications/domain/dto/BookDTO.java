@@ -7,12 +7,12 @@ import java.util.UUID;
 public class BookDTO extends ExtendedDTO {
 
     private String title;
-    private int purchasePrice;
+    private double purchasePrice;
 
     public BookDTO() {
     }
 
-    public BookDTO(UUID id, String title, int purchasePrice) {
+    public BookDTO(UUID id, String title, double purchasePrice) {
         super(id);
         this.title = title;
         this.purchasePrice = purchasePrice;
@@ -27,11 +27,11 @@ public class BookDTO extends ExtendedDTO {
         return this;
     }
 
-    public int getPurchasePrice() {
+    public double getPurchasePrice() {
         return purchasePrice;
     }
 
-    public BookDTO setPurchasePrice(int purchasePrice) {
+    public BookDTO setPurchasePrice(double purchasePrice) {
         this.purchasePrice = purchasePrice;
         return this;
     }

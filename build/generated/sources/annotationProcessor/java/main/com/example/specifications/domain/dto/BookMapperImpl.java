@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-08-30T16:19:36+0200",
+    date = "2022-09-02T21:47:18+0200",
     comments = "version: 1.5.2.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-7.5.jar, environment: Java 18.0.2 (Oracle Corporation)"
 )
 @Component
@@ -65,9 +65,7 @@ public class BookMapperImpl implements BookMapper {
 
         bookDTO.setId( book.getId() );
         bookDTO.setTitle( book.getTitle() );
-        if ( book.getPurchasePrice() != null ) {
-            bookDTO.setPurchasePrice( book.getPurchasePrice() );
-        }
+        bookDTO.setPurchasePrice( (int) book.getPurchasePrice() );
 
         return bookDTO;
     }

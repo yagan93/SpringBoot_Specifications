@@ -27,7 +27,7 @@ public class BookController {
     }
 
     @GetMapping
-    public ResponseEntity<List<BookDTO>> findAll(@RequestParam() int price) {
-        return new ResponseEntity<>(bookMapper.toDTOs(bookService.findAll(price)), HttpStatus.OK);
+    public ResponseEntity<List<BookDTO>> findAll(@RequestParam() double purchasePrice) {
+        return new ResponseEntity<>(bookMapper.toDTOs(bookService.findAll(purchasePrice)), HttpStatus.OK);
     }
 }

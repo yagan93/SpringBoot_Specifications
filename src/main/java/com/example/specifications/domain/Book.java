@@ -9,13 +9,12 @@ import java.util.UUID;
 public class Book extends ExtendedEntity {
 
     private String title;
-
-    private Integer purchasePrice;
+    private double purchasePrice;
 
     public Book() {
     }
 
-    public Book(UUID id, String title, Integer purchasePrice) {
+    public Book(UUID id, String title, double purchasePrice) {
         super(id);
         this.title = title;
         this.purchasePrice = purchasePrice;
@@ -30,11 +29,11 @@ public class Book extends ExtendedEntity {
         return this;
     }
 
-    public Integer getPurchasePrice() {
+    public double getPurchasePrice() {
         return purchasePrice;
     }
 
-    public Book setPurchasePrice(Integer purchasePrice) {
+    public Book setPurchasePrice(double purchasePrice) {
         this.purchasePrice = purchasePrice;
         return this;
     }
